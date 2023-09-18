@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body, html{
+    width: 100%;
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+    background-color: #D0D4D5;
+    position: relative;
+}
+
+#nav{
+    height: 5rem;
+    padding: 0 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav-part1 img{
+    /* margin-top: .5rem; */
+    height: 1.5rem;
+    margin-right: 10rem;
+}
+#nav-part1 h4{
+    margin-left: 2.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    
+}
+#nav-part1 h4:hover{
+    border-bottom: 2px solid #000;
+   transition: .30s all ease-in;
+}
+#nav-part1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#nav-part2 {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;  
+    flex-wrap: wrap;
+}
+#nav-part2 i{
+    margin-right: 4rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+
+#content{
+    position: relative;
+    width: 100%;
+    height: calc(100% - 5rem);
+    display: flex;
+}
+
+#content #left{
+    width: 35%;
+    height: 100%;
+    padding: 8rem 4rem;
+  
+}
+
+#left h5{
+    font-size: 1.2rem;
+    color: #373737;
+    margin-bottom: 1rem;
+}
+
+#left p{
+    width: 70%;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    color: #373737;
+    line-height: 1.3rem;
+}
+
+#left h2{
+    font-size: 3rem;
+   text-transform: uppercase;
+   line-height: 3rem;
+   margin-bottom: 2rem;
+}
+
+
+#left button{
+    background: #000000;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: .7rem 1.2rem;
+    border: none;
+    font-weight: 600;
+    border-radius: 2.5rem;
+    border-top-left-radius: 0px;
+}
+#left button:hover{
+   
+    background: #fff;
+    color: #000000;
+    transition: .7s all ease-in-out;
+  
+}
+
+ #right{
+    width: 65%;
+    height: 100%;
+    
+    padding:130px;
+    white-space: nowrap;
+    overflow-x: auto;
+   
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer and Microsoft Edge */
+}
+
+
+#right::-webkit-scrollbar {
+    width: 0; /* WebKit-based browsers like Chrome and Safari */
+}
+
+.elm{
+    height:400px;
+    width: 40%;
+    position: relative;
+    background-color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.33px);
+    border-radius: 10px;
+    display: inline-block;
+    margin-right: 40px;
+}
+
+.elm img{
+    width: 100%;
+
+    object-fit: cover;
+    position: absolute;
+    top: 15%;
+  
+}
+
+.elm h4{
+    background-color: #000000;
+    color: white;
+    position: absolute;
+    bottom: 9%;
+    right: 0;
+    padding: 10px 30px;
+    border-radius: 1rem;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    font-size:10px;
+}
+
+
+.elm h5{
+    background-color: #b7b7b7;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0%;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+   
+}
+
+@media (max-width:1250px){
+
+    #left{
+        width: 40%;
+    }
+    #right{
+        width: 60%;
+    }
+
+    .elm {
+        width: 100%; /* Show 2 elements per row on small screens */
+    }
+    .elm img{
+        width: 70%;
+      
+    }
+
+}
+
+
+@media (max-width:846px){
+
+    #content{
+       
+        flex-direction: column;
+    }
+    
+   #content #left{
+        width: 100%;
+        text-align: center;
+        padding-bottom: 0px;
+    }
+
+    #content #right{
+        width: 100%;
+        margin-top: 0;
+    }
+
+    #right {
+        overflow-x: scroll; /* Allow horizontal scrolling on small screens */
+    }
+
+    .elm {
+        width: 100%; /* Show 2 elements per row on small screens */
+    }
+    /* #left{
+        width: 40%;
+    }
+    #right{
+        width: 60%;
+    }
+
+    .elm {
+        width: 100%; 
+    }
+    .elm img{
+        width: 70%;
+    } */
+
+}
+
+
+
+@media (max-width:500px) {
+    #content{
+       
+        flex-direction: column;
+    }
+    
+   #content #left{
+        width: 100%;
+    }
+
+    #content #right{
+        width: 100%;
+    }
+
+    #right {
+        overflow-x: scroll; /* Allow horizontal scrolling on small screens */
+    }
+
+    .elm {
+        width: 100%; /* Show 2 elements per row on small screens */
+    }
+    .elm img{
+        width: 70%;
+        left: 43px;
+    }
+}
