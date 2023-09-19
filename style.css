@@ -25,6 +25,20 @@ body, html{
     align-items: center;
 }
 
+#nav1{
+    height: 5rem;
+    padding: 0 2rem;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    display: none;
+}
+#nav1 img{
+    /* margin-top: .5rem; */
+    height: 3.5rem;
+    margin-top: 3rem;
+}
+
 #nav-part1 img{
     /* margin-top: .5rem; */
     height: 1.5rem;
@@ -201,7 +215,13 @@ body, html{
 
 
 @media (max-width:846px){
+    #nav{
+        display: none;
+     }
 
+     #nav1{
+        display: block;
+     }
     #content{
        
         flex-direction: column;
@@ -224,6 +244,7 @@ body, html{
 
     .elm {
         width: 100%; /* Show 2 elements per row on small screens */
+        height: 333px;
     }
     /* #left{
         width: 40%;
@@ -243,7 +264,11 @@ body, html{
 
 
 
-@media (max-width:500px) {
+@media (max-width:500px)
+{
+
+   
+    
     #content{
        
         flex-direction: column;
